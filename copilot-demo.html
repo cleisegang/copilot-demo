@@ -446,6 +446,94 @@
       margin-bottom: 16px;
     }
 
+    /* ===== Learning Resources ===== */
+    .resources-group-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--fgColor-muted, #636c76);
+      margin: 0 0 16px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      font-size: 12px;
+    }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--borderColor-default, #d0d7de);
+      border-radius: 10px;
+      padding: 18px;
+      text-decoration: none;
+      color: var(--fgColor-default, #1f2328);
+      background: var(--bgColor-default, #ffffff);
+      transition: box-shadow 0.15s, transform 0.1s, border-color 0.15s;
+    }
+    .resource-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+      border-color: var(--borderColor-accent-emphasis, #0969da);
+    }
+    .resource-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .resource-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .resource-card-name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .resource-card-handle {
+      font-size: 11px;
+      color: var(--fgColor-muted, #636c76);
+      margin-top: 2px;
+    }
+    .resource-card-desc {
+      font-size: 13px;
+      color: var(--fgColor-muted, #636c76);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 12px;
+    }
+    .resource-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .res-tag {
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--bgColor-neutral-muted, #f6f8fa);
+      border: 1px solid var(--borderColor-default, #d0d7de);
+      color: var(--fgColor-muted, #636c76);
+    }
+    .resource-card-cta {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--fgColor-accent, #0969da);
+    }
+
     /* ===== Dark mode color fixes ===== */
     [data-color-mode="dark"] .hero-title {
       background: linear-gradient(135deg, #e6edf3 0%, #79c0ff 100%);
@@ -494,6 +582,7 @@
       <li><a href="#actions">Actions</a></li>
       <li><a href="#mcp">MCPs</a></li>
       <li><a href="#configuration">Configuration</a></li>
+      <li><a href="#resources">Learn</a></li>
       <li><a href="#quickstart">Quick Start</a></li>
     </ul>
     <button id="colorModeToggle" class="btn btn-sm" aria-label="Toggle color mode">
@@ -1353,6 +1442,230 @@ jobs:
         </div>
       </div>
     </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ===== LEARNING RESOURCES ===== -->
+  <section id="resources" aria-labelledby="resources-title">
+    <h2 class="section-title" id="resources-title">
+      <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-4px;margin-right:6px" aria-hidden="true"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/></svg>
+      Training &amp; Learning Resources
+    </h2>
+    <p class="section-sub">Videos, hands-on labs, and structured learning paths from GitHub, the VS Code team, and the developer community.</p>
+
+    <!-- ===== GITHUB OFFICIAL ===== -->
+    <h3 class="resources-group-title">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+      Official GitHub &amp; Microsoft
+    </h3>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://www.youtube.com/@GitHub" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#24292f;color:#fff">▶</div>
+          <div>
+            <div class="resource-card-name">GitHub YouTube</div>
+            <div class="resource-card-handle">@GitHub · youtube.com/@GitHub</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">The official GitHub channel — demos, feature launches, GitHub Universe keynotes, and deep-dives on Copilot, Actions, and more.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Copilot</span><span class="res-tag">Actions</span><span class="res-tag">Coding Agent</span><span class="res-tag">MCP</span>
+        </div>
+        <div class="resource-card-cta">Browse channel →</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/results?search_query=github+copilot+official+2024+2025" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#0078d4;color:#fff">🎓</div>
+          <div>
+            <div class="resource-card-name">GitHub Universe Talks</div>
+            <div class="resource-card-handle">github.com/universe</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Annual conference with in-depth technical sessions on every Copilot feature. Full talk recordings available on YouTube. Great for seeing real-world use cases.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Keynote</span><span class="res-tag">Deep-dives</span><span class="res-tag">Enterprise</span>
+        </div>
+        <div class="resource-card-cta">Watch sessions →</div>
+      </a>
+
+      <a class="resource-card" href="https://learn.microsoft.com/en-us/training/paths/copilot/" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#0078d4;color:#fff">📘</div>
+          <div>
+            <div class="resource-card-name">Microsoft Learn: Copilot Fundamentals</div>
+            <div class="resource-card-handle">learn.microsoft.com · Free · Modules</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Structured 2-part learning path from Microsoft. Covers Copilot plans (Individual vs Business vs Enterprise), using Copilot responsibly, and advanced features. Includes knowledge checks.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Structured</span><span class="res-tag">Free</span><span class="res-tag">Beginner–Intermediate</span>
+        </div>
+        <div class="resource-card-cta">Start learning path →</div>
+      </a>
+
+      <a class="resource-card" href="https://learn.microsoft.com/en-us/training/github/" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#0078d4;color:#fff">🏅</div>
+          <div>
+            <div class="resource-card-name">Microsoft Learn: GitHub Training Paths</div>
+            <div class="resource-card-handle">learn.microsoft.com/training/github · Free</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Full suite of GitHub learning paths: Foundations, Copilot, Actions, Advanced Security, Administration. Structured modules with exercises — ideal prep for GitHub Certifications.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Foundations</span><span class="res-tag">Actions</span><span class="res-tag">Security</span><span class="res-tag">Certification Prep</span>
+        </div>
+        <div class="resource-card-cta">Browse all paths →</div>
+      </a>
+
+      <a class="resource-card" href="https://github.com/skills" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#1a7f37;color:#fff">🧪</div>
+          <div>
+            <div class="resource-card-name">GitHub Skills</div>
+            <div class="resource-card-handle">github.com/skills · Hands-on repos</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Learn by doing — fork a repo and complete exercises with automated feedback from GitHub Actions. Covers Copilot, Actions, Security, and core GitHub workflows. No setup required.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Hands-on</span><span class="res-tag">Self-paced</span><span class="res-tag">Free</span><span class="res-tag">Automated feedback</span>
+        </div>
+        <div class="resource-card-cta">Try a skill →</div>
+      </a>
+
+      <a class="resource-card" href="https://examregistration.github.com/" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#8250df;color:#fff">🎖️</div>
+          <div>
+            <div class="resource-card-name">GitHub Certifications</div>
+            <div class="resource-card-handle">examregistration.github.com</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Official GitHub certifications: Foundations, Actions, Advanced Security, Copilot, and Administration. Validate your skills with an industry-recognized credential.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Copilot Cert</span><span class="res-tag">Actions Cert</span><span class="res-tag">Foundations</span>
+        </div>
+        <div class="resource-card-cta">Register for exam →</div>
+      </a>
+
+    </div>
+
+    <!-- ===== VS CODE / BURKE HOLLAND ===== -->
+    <h3 class="resources-group-title" style="margin-top:36px">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25Zm2.97 3.22a.75.75 0 1 1 1.06 1.06L4.56 8l1.22 1.22a.75.75 0 0 1-1.06 1.06l-1.75-1.75a.75.75 0 0 1 0-1.06Zm5.56 1.06a.75.75 0 1 1 1.06-1.06l1.75 1.75a.75.75 0 0 1 0 1.06l-1.75 1.75a.75.75 0 1 1-1.06-1.06L11.44 8Z"/></svg>
+      Burke Holland &amp; the VS Code Team
+    </h3>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://www.youtube.com/@code" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#007acc;color:#fff">💙</div>
+          <div>
+            <div class="resource-card-name">Visual Studio Code YouTube</div>
+            <div class="resource-card-handle">@code · youtube.com/@code</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">The official VS Code channel where Burke Holland and the VS Code team share Copilot tips, new feature walkthroughs, agent mode demos, and MCP integration videos. Updated frequently.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Agent Mode</span><span class="res-tag">Copilot Chat</span><span class="res-tag">MCP</span><span class="res-tag">Edits</span>
+        </div>
+        <div class="resource-card-cta">Browse channel →</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/results?search_query=burke+holland+copilot+vscode" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#007acc;color:#fff" aria-label="Burke Holland">BH</div>
+          <div>
+            <div class="resource-card-name">Burke Holland — Copilot Tips</div>
+            <div class="resource-card-handle">github.com/burkeholland · @vscode (TikTok)</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Burke Holland (VS Code team, Microsoft) produces quick-hit tips on Copilot in VS Code — inline suggestions, agent mode, edits, prompt engineering, and hidden productivity tricks.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Tips &amp; Tricks</span><span class="res-tag">Short-form</span><span class="res-tag">VS Code</span>
+        </div>
+        <div class="resource-card-cta">Search his videos →</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/results?search_query=vs+code+copilot+agent+mode+2025" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#007acc;color:#fff">🤖</div>
+          <div>
+            <div class="resource-card-name">VS Code — Agent Mode Deep Dives</div>
+            <div class="resource-card-handle">youtube.com/@code · search "agent mode"</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">Dedicated videos on Copilot Agent Mode — the autonomous IDE workflow that uses MCP servers, runs terminal commands, and iterates on your code across multiple files.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Agent Mode</span><span class="res-tag">MCP</span><span class="res-tag">Autonomous</span>
+        </div>
+        <div class="resource-card-cta">Search videos →</div>
+      </a>
+
+    </div>
+
+    <!-- ===== JOHN LINDQUIST ===== -->
+    <h3 class="resources-group-title" style="margin-top:36px">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-2px;margin-right:6px" aria-hidden="true"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/></svg>
+      John Lindquist &amp; the Developer Community
+    </h3>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://egghead.io/q?q=github+copilot" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#fc521f;color:#fff">🥚</div>
+          <div>
+            <div class="resource-card-name">egghead.io — GitHub Copilot</div>
+            <div class="resource-card-handle">egghead.io · Founded by John Lindquist</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">egghead.io is the go-to platform for concise, high-signal dev tutorials. John Lindquist (founder) and other instructors cover Copilot, VS Code, and AI-assisted workflows. No fluff, just code.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Bite-sized</span><span class="res-tag">High signal</span><span class="res-tag">VS Code</span><span class="res-tag">AI workflows</span>
+        </div>
+        <div class="resource-card-cta">Browse courses →</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/results?search_query=john+lindquist+copilot+github+vscode" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#fc521f;color:#fff" aria-label="John Lindquist">JL</div>
+          <div>
+            <div class="resource-card-name">John Lindquist — YouTube</div>
+            <div class="resource-card-handle">github.com/johnlindquist · @johnlindquist</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">John Lindquist (creator of egghead.io and prolific VS Code extension author) shares in-depth walkthroughs on Copilot prompt engineering, agent workflows, and building with AI tools.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Prompt Engineering</span><span class="res-tag">Deep dives</span><span class="res-tag">Extensions</span>
+        </div>
+        <div class="resource-card-cta">Search his videos →</div>
+      </a>
+
+      <a class="resource-card" href="https://www.youtube.com/results?search_query=github+copilot+coding+agent+tutorial+2025" target="_blank" rel="noopener">
+        <div class="resource-card-header">
+          <div class="resource-avatar" style="background:#636c76;color:#fff">🌐</div>
+          <div>
+            <div class="resource-card-name">Community — Copilot Tutorials</div>
+            <div class="resource-card-handle">YouTube · Various creators</div>
+          </div>
+        </div>
+        <div class="resource-card-desc">A growing library of community tutorials covering Copilot Coding Agent, MCP server setup, Copilot CLI walkthroughs, and real-world use cases from engineers at top companies.</div>
+        <div class="resource-card-tags">
+          <span class="res-tag">Coding Agent</span><span class="res-tag">MCP setup</span><span class="res-tag">Real-world</span>
+        </div>
+        <div class="resource-card-cta">Search YouTube →</div>
+      </a>
+
+    </div>
+
+    <!-- Tip box -->
+    <div class="info-banner" style="margin-top:32px">
+      🎯 <span><strong>Pro tip for staying current:</strong> GitHub Copilot features evolve fast. Subscribe to <a href="https://www.youtube.com/@GitHub" target="_blank" rel="noopener" style="color:var(--fgColor-accent)">@GitHub</a> and <a href="https://www.youtube.com/@code" target="_blank" rel="noopener" style="color:var(--fgColor-accent)">@code</a> on YouTube and enable notifications. The <a href="https://github.blog/" target="_blank" rel="noopener" style="color:var(--fgColor-accent)">GitHub Blog</a> and <a href="https://code.visualstudio.com/updates" target="_blank" rel="noopener" style="color:var(--fgColor-accent)">VS Code release notes</a> are also excellent for tracking new Copilot capabilities each month.</span>
+    </div>
+
   </section>
 
   <hr class="section-divider" />
